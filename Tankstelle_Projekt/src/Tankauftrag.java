@@ -10,7 +10,7 @@ public class Tankauftrag {
 	
 	public Tankauftrag(Zapfhahn pSaeule)
 	{
-		hallo;
+		
 	}
 	public Date getmDatum() {
 		return mDatum;
