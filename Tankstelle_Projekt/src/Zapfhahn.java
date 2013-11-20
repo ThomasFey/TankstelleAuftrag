@@ -1,23 +1,20 @@
+import java.util.List;
+
 
 public class Zapfhahn {
 	private int mNummer;
-	private String mStatus;
+	private List<Treibstoff> mTreibstoffe;
 	
-	public Zapfhahn (Zapfsaeule pZapfsaeule, Tank pTank)
+	public Zapfhahn (Treibstoff pTreibstoffe, int pNummer)
 	{
 		
-	}
-
-	public void setmStatus(String pStatus) {
-		this.mStatus = pStatus;
-	}
-
-	public String getmStatus() {
-		return mStatus;
 	}
 
 	public int getmNummer() {
 		return mNummer;
 	}
 	
+	public List<Treibstoff> getmTreibstoffe() {
+		return mTreibstoffe;
+	}
 }

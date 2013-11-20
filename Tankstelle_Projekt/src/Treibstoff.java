@@ -1,26 +1,36 @@
 
 public class Treibstoff {
-	private String Bezeichnung;
-	private double PreisProLiter;
+	private String mBezeichnung;
+	private double mPreisProLiter;
+	private int mKapazitaet;
+	private double mInhalt;
 	
-	public Treibstoff (double pPreisProLiter, String pBezeichnung)
+	public Treibstoff (double pPreisProLiter, String pBezeichnung, int pKapazitaet)
 	{
 		
 	}
 
-	public void setPreisProLiter(double pPreisProLiter) {
-		PreisProLiter = pPreisProLiter;
+	public void setmPreisProLiter(double pPreisProLiter) {
+		mPreisProLiter = pPreisProLiter;
 	}
 
-	public double getPreisProLiter() {
-		return PreisProLiter;
+	public double getmPreisProLiter() {
+		return mPreisProLiter;
 	}
 
-	public void setBezeichnung(String pBezeichnung) {
-		Bezeichnung = pBezeichnung;
+	public void setmBezeichnung(String pBezeichnung) {
+		mBezeichnung = pBezeichnung;
 	}
 
-	public String getBezeichnung() {
-		return Bezeichnung;
+	public String getmBezeichnung() {
+		return mBezeichnung;
+	}
+	
+	public int getmKapatitaet() {
+		return mKapazitaet;
+	}
+	
+	public double getmInhalt() {
+		return mInhalt;
 	}
 }

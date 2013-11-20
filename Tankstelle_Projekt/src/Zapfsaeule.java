@@ -1,21 +1,15 @@
+import java.util.List;
+
 
 public class Zapfsaeule {
 	private int mNummer;
 	private String mStatus;
-	private String mModus;
+	private List<Zapfhahn> mZapfhahn;
 	
-	public Zapfsaeule(String pModus)
+	public Zapfsaeule(String pStatus)
 	{
-		mModus = pModus;
+		mStatus = pStatus;
 		mStatus = "Benutzbar";
-	}
-
-	public void setmModus(String pModus) {
-		mModus = pModus;
-	}
-
-	public String getmModus() {
-		return mModus;
 	}
 
 	public void setmStatus(String pStatus) {
@@ -28,5 +22,9 @@ public class Zapfsaeule {
 
 	public int getmNummer() {
 		return mNummer;
+	}
+	
+	public List<Zapfhahn> getmZapfhahn() {
+		return mZapfhahn;
 	}
 }
