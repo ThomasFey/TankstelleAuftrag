@@ -1,10 +1,9 @@
-
 public class Kasse {
 	private int mUmsatz;
 	
 	public Kasse ()
 	{
-		
+		hfdjhfdjk;	
 	}
 	
 	public void addTankauftrag (double pBetrag)
