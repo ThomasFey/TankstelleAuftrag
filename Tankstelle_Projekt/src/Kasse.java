@@ -3,7 +3,7 @@ public class Kasse {
 	
 	public Kasse ()
 	{
-		hfdjhfdjk;	
+			
 	}
 	
 	public void addTankauftrag (double pBetrag)
