@@ -6,10 +6,26 @@ public class Zapfsaeule {
 	private String mStatus;
 	private List<Zapfhahn> mZapfhahn;
 	
-	public Zapfsaeule(String pStatus)
+	public Zapfsaeule(String pArt)
 	{
-		mStatus = pStatus;
 		mStatus = "Benutzbar";
+		if(pArt = "Auto")
+		{
+			for(i = 1; i <= 4;i++)
+			{
+				Zapfhahn einZapfhahn = new Zapfhahn();
+				
+			}
+		}
+		else
+		{
+			or(i = 1; i <= 2;i++)
+			{
+				Zapfhahn einZapfhahn = new Zapfhahn();
+				
+			}
+		}
+		
 	}
 
 	public void setmStatus(String pStatus) {
