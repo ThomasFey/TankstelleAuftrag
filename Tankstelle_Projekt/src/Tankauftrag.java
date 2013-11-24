@@ -10,7 +10,8 @@ public class Tankauftrag {
 	
 	public Tankauftrag(Zapfhahn pSaeule)
 	{
-		
+		mDatum = new Date();
+		mStatus = "Unbezahlt";
 	}
 	public Date getmDatum() {
 		return mDatum;
