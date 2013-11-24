@@ -3,18 +3,19 @@ import java.util.List;
 
 public class Zapfhahn {
 	private int mNummer;
-	private List<Treibstoff> mTreibstoffe;
+	private Treibstoff mTreibstoffe;
 	
 	public Zapfhahn (Treibstoff pTreibstoffe, int pNummer)
 	{
-		
+		mTreibstoffe = pTreibstoffe;
+		mNummer = pNummer;
 	}
 
 	public int getmNummer() {
 		return mNummer;
 	}
 	
-	public List<Treibstoff> getmTreibstoffe() {
+	public Treibstoff getmTreibstoffe() {
 		return mTreibstoffe;
 	}
 }
