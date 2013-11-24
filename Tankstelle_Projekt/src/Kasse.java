@@ -1,19 +1,19 @@
 public class Kasse {
-	private int mUmsatz;
+	private double mUmsatz;
 	
 	public Kasse ()
 	{
-			
+		mUmsatz = 0;	
 	}
 	
 	public void addTankauftrag (double pBetrag)
 	{
-		
+		mUmsatz += pBetrag;
 	}
 
 
 
-	public int getmUmsatz() {
+	public double getmUmsatz() {
 		return mUmsatz;
 	}
 }
