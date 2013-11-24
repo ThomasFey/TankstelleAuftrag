@@ -1,4 +1,3 @@
-
 public class Treibstoff {
 	private String mBezeichnung;
 	private double mPreisProLiter;
@@ -7,7 +6,10 @@ public class Treibstoff {
 	
 	public Treibstoff (double pPreisProLiter, String pBezeichnung, int pKapazitaet)
 	{
-		
+		mInhalt = 0;
+		mBezeichnung = Bezeichnung;
+		mKapazitaet = pKapazitaet;
+		mPreisProLiter = pPreisProLiter;
 	}
 
 	public void setmPreisProLiter(double pPreisProLiter) {
