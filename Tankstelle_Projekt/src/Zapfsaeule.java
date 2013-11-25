@@ -9,7 +9,7 @@ public class Zapfsaeule {
 	public Zapfsaeule(String pArt)
 	{
 		mStatus = "Benutzbar";
-		if(pArt = "Auto")
+		if(pArt == "Auto")
 		{
 			for(i = 1; i <= 4;i++)
 			{

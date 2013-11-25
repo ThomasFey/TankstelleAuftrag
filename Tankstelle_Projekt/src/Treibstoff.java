@@ -7,7 +7,7 @@ public class Treibstoff {
 	public Treibstoff (double pPreisProLiter, String pBezeichnung, int pKapazitaet)
 	{
 		mInhalt = 0;
-		mBezeichnung = Bezeichnung;
+		mBezeichnung = mBezeichnung;
 		mKapazitaet = pKapazitaet;
 		mPreisProLiter = pPreisProLiter;
 	}

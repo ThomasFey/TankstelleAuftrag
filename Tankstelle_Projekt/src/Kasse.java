@@ -8,7 +8,7 @@ public class Kasse {
 	
 	public void bezahleTankauftrag (Tankauftrag pAuftrag)
 	{
-		mUmsatz =+ pAuftrag.mZahlung;
+		mUmsatz =+ pAuftrag.getmZahlung();
 		pAuftrag.setmStatus("Bezahlt");
 		Zapfsaeule eineSaeule = pAuftrag.getmZapfhahn().getmZapfsaeule();
 		eineSaeule.setmStatus("Benutzbar");
