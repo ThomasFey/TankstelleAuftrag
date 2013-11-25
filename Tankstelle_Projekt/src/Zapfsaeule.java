@@ -13,7 +13,7 @@ public class Zapfsaeule {
 		{
 			for(i = 1; i <= 4;i++)
 			{
-				Zapfhahn einZapfhahn = new Zapfhahn(Tankstelle.getTreibstoffeById(i),i,this);
+				Zapfhahn einZapfhahn = new Zapfhahn(Tankstelle.getTreibstoffeById((i - 1)),i,this);
 				
 			}
 		}
@@ -21,7 +21,7 @@ public class Zapfsaeule {
 		{
 			for(i = 1; i <= 2;i++)
 			{
-				Zapfhahn einZapfhahn = new Zapfhahn(Tankstelle.getTreibstoffeById(i),i,this);
+				Zapfhahn einZapfhahn = new Zapfhahn(Tankstelle.getTreibstoffeById((i - 1)),i,this);
 				
 			}
 		}
