@@ -7,17 +7,23 @@ public class Tankauftrag {
 	private double mZahlung;
 	private String mStatus;
 	private Date mDatum;
+	private Zapfhahn mZapfhahn;
 	
-	public Tankauftrag(Zapfhahn pSaeule)
+	public Tankauftrag(Zapfhahn pHahn)
 	{
+		mZapfhahn = pHahn;
 		mDatum = new Date();
 		mStatus = "Unbezahlt";
+		pHahn.getmZapfsaeule().setmStatus("Unbenutzbar");
 	}
 	public Date getmDatum() {
 		return mDatum;
 	}
 	public void setmStatus(String pStatus) {
 		this.mStatus = pStatus;
+	}
+	public Zapfhahn getmZapfhahn() {
+		return mZapfhahn;
 	}
 	public String getmStatus() {
 		return mStatus;
