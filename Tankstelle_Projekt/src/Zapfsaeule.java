@@ -11,7 +11,7 @@ public class Zapfsaeule {
 		mStatus = "Benutzbar";
 		if(pArt == "Auto")
 		{
-			for(i = 1; i <= 4;i++)
+			for(int i = 1; i <= 4;i++)
 			{
 				Zapfhahn einZapfhahn = new Zapfhahn(Tankstelle.getTreibstoffeById((i - 1)),i,this);
 				
@@ -19,7 +19,7 @@ public class Zapfsaeule {
 		}
 		else
 		{
-			for(i = 1; i <= 2;i++)
+			for(int i = 1; i <= 2;i++)
 			{
 				Zapfhahn einZapfhahn = new Zapfhahn(Tankstelle.getTreibstoffeById((i - 1)),i,this);
 				

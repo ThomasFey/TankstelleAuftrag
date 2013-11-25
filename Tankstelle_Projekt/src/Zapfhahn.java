@@ -17,7 +17,7 @@ public class Zapfhahn {
 		return mNummer;
 	}
 	public Zapfsaeule getmZapfsaeule() {
-		return Zapfsaeule;
+		return mZapfsaeule;
 	}
 	public Treibstoff getmTreibstoffe() {
 		return mTreibstoffe;
