@@ -22,4 +22,9 @@ public class Zapfhahn {
 	public Treibstoff getmTreibstoffe() {
 		return mTreibstoffe;
 	}
+	public void Tanken(Tankstelle dieTankstelle)
+	{
+		Tankauftrag einAuftrag = new Tankauftrag(this);
+		dieTankstelle.addTankauftrag(einAuftrag);
+	}
 }
