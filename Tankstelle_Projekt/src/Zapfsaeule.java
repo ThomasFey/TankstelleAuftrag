@@ -13,15 +13,15 @@ public class Zapfsaeule {
 		{
 			for(i = 1; i <= 4;i++)
 			{
-				Zapfhahn einZapfhahn = new Zapfhahn();
+				Zapfhahn einZapfhahn = new Zapfhahn(Tankstelle.getTreibstoffeById(i),i,this);
 				
 			}
 		}
 		else
 		{
-			or(i = 1; i <= 2;i++)
+			for(i = 1; i <= 2;i++)
 			{
-				Zapfhahn einZapfhahn = new Zapfhahn();
+				Zapfhahn einZapfhahn = new Zapfhahn(Tankstelle.getTreibstoffeById(i),i,this);
 				
 			}
 		}
