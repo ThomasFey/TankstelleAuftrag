@@ -6,14 +6,14 @@ public class Zapfsaeule {
 	private String mStatus;
 	private List<Zapfhahn> mZapfhahn;
 	
-	public Zapfsaeule(String pArt)
+	public Zapfsaeule(String pArt,Tankstelle pTankstelle)
 	{
 		mStatus = "Benutzbar";
 		if(pArt == "Auto")
 		{
 			for(int i = 1; i <= 4;i++)
 			{
-				Zapfhahn einZapfhahn = new Zapfhahn(Tankstelle.getTreibstoffeById((i - 1)),i,this);
+				Zapfhahn einZapfhahn = new Zapfhahn(pTankstelle.getTreibstoffeById((i - 1)),i,this);
 				
 			}
 		}
@@ -21,7 +21,7 @@ public class Zapfsaeule {
 		{
 			for(int i = 1; i <= 2;i++)
 			{
-				Zapfhahn einZapfhahn = new Zapfhahn(Tankstelle.getTreibstoffeById((i - 1)),i,this);
+				Zapfhahn einZapfhahn = new Zapfhahn(pTankstelle.getTreibstoffeById((i - 1)),i,this);
 				
 			}
 		}
