@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.ArrayList;
 
 public class Tankstelle {
 	private String mStandort;
@@ -7,8 +8,8 @@ public class Tankstelle {
 	
 	public Tankstelle()
 	{
-		mTreibstoffe = new Arraylist<Treibstoff>();
-		mTankauftraege = new Arraylist<Tankauftrag>()
+		mTreibstoffe = new ArrayList<Treibstoff>();
+		mTankauftraege = new ArrayList<Tankauftrag>();
 	}
 	public void addTankauftrag(Tankauftrag pTankauftrag)
 	{
