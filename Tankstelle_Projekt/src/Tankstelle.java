@@ -3,10 +3,20 @@ import java.util.List;
 public class Tankstelle {
 	private String mStandort;
 	private List<Treibstoff> mTreibstoffe;
+	private List<Tankauftrag> mTankauftraege;
 	
 	public Tankstelle()
 	{
 		mTreibstoffe = new Arraylist<Treibstoff>();
+		mTankauftraege = new Arraylist<Tankauftrag>()
+	}
+	public void addTankauftrag(Tankauftrag pTankauftrag)
+	{
+		mTankauftraege.Add(pTankauftrag);
+	}
+	public List<Tankauftrag> getTankauftrag()
+	{
+		return mTreibstoffe;
 	}
 	public void addTreibstoff(Treibstoff pTreibstoff)
 	{
