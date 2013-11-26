@@ -48,7 +48,7 @@ public class Tankstelle {
 		Treibstoff = getTreibstoffeByBezeichnung(string pTreibstoffbezeichnung)
 		int anzahlAuftraege = 0;
 		double Umsatz = 0;
-		for(int i = 0; i < mTankauftraege; i++)
+		for(int i = 0; i < mTankauftraege.size(); i++)
 		{
 			Tankauftrag einTankauftrag = mTankauftraege.get(i);
 			if(Treibstoff == einTankauftrag.getmZapfhahn().getmTreibstoffe())
@@ -66,7 +66,7 @@ public class Tankstelle {
 		Treibstoff = pTreibstoff;
 		int anzahlAuftraege = 0;
 		double Umsatz = 0;
-		for(int i = 0; i < mTankauftraege.Count(); i++)
+		for(int i = 0; i < mTankauftraege.size(); i++)
 		{
 			Tankauftrag einTankauftrag = mTankauftraege.get(i);
 			if(Treibstoff == einTankauftrag.getmZapfhahn().getmTreibstoffe())
