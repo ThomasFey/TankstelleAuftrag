@@ -6,12 +6,14 @@ public class Tankstelle {
 	private List<Treibstoff> mTreibstoffe;
 	private List<Tankauftrag> mTankauftraege;
 	private List<Zapfsaeule> mZapfsaeulen;
+	private AnzeigeSchild mAnzeigeSchild;
 	
 	public Tankstelle()
 	{
 		mTreibstoffe = new ArrayList<Treibstoff>();
 		mTankauftraege = new ArrayList<Tankauftrag>();
 		mZapfsaeulen = new ArrayList<Zapfsaeule>();
+		mAnzeigeSchild = new AnzeigeSchild();
 	}
 	public void addTankauftrag(Tankauftrag pTankauftrag)
 	{

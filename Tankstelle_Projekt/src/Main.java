@@ -35,6 +35,10 @@ public class Main {
 		t.addZapfsaeule(new Zapfsaeule(autoTreibstoffe));
 		t.addZapfsaeule(new Zapfsaeule(lastwagenTreibstoffe));
 		
+		AnzeigeSchild s = new AnzeigeSchild();
+		
+		s.displayInfo(autoTreibstoffe);
+		
 	}
 
 }
