@@ -9,12 +9,14 @@ public class Tankauftrag {
 	private Date mDatum;
 	private Zapfhahn mZapfhahn;
 	
-	public Tankauftrag(Zapfhahn pHahn)
+	public Tankauftrag(Zapfhahn pHahn,int pTreibstoffLiter)
 	{
+		TreibstoffLiter = pTreibstoffLiter;
 		mZapfhahn = pHahn;
 		mDatum = new Date();
 		mStatus = "Unbezahlt";
-		pHahn.getmZapfsaeule().setmStatus("Unbenutzbar");
+		mZahlung = (mZapfhahn.getmTreibstoffe().getmPreisProLiter() * TreibstoffLiter);
+		mZapfhahn.getmZapfsaeule().setmStatus("Unbenutzbar");
 	}
 	public Date getmDatum() {
 		return mDatum;
