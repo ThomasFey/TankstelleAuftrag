@@ -46,22 +46,51 @@ public class Main {
 			switch (eingabe) {
 	            case Tanken:
 	            	System.out.println("An welche Zapfsaeule möchten sie tanken?");
-	            	int zapfhahnIndex = Integer.parseInt(console.readLine());
+	            	int zapfsaeuleIndex = Integer.parseInt(console.readLine());
 	            	System.out.println("Wie viel möchten sie tanken?");
-	            	String anzahlLiter = console.readLine();
-	            	System.out.println("Was  möchten sie tanken?");
+	            	int anzahlLiter = Integer.parseInt(console.readLine());
+	            	System.out.println("Was möchten sie tanken?");
 	            	String treibstoffBez = console.readLine();
-	            	//Tanken
+	            	int index = 0
+	            	for(Zapfsaeule eineZapfsaeule : t.getZapfsaeulen())
+	            	{
+	            		if(zapfsaeuleIndex == index)
+	            		{
+	            			for(Zapfhahn einZapfhahn : eineZapfsaeule.getmZapfhahn())
+	            			{
+	            				einZapfhahn.Tanken(t, anzahlLiter)
+	            			}
+	            		}
+	            		index++;
+	            	}
 	                     break;
 	            case Bezahlen:
 	            	System.out.println("Für welche Zapfsaeule möchten sie zahlen?");
-	            	int zapfhahnIndex = Integer.parseInt(console.readLine());
-	            	//Bezahlen
+	            	int zapfsaeuleIndex = Integer.parseInt(console.readLine());
+	            	int index = 0
+	            	for(Zapfsaeule eineZapfsaeule : t.getZapfsaeulen())
+	            	{
+	            		if(zapfsaeuleIndex == index)
+	            		{
+	            			for(Tankauftrag einAuftrag : t.getTankauftrag)
+	            			{
+	            				if(eineZapfsaeule == einAuftrag.getmZapfhahn().getmZapfsaeule())
+	            				{
+	            					if(einAuftrag.getmStatus() == "Unbezahlt")
+	            					{
+	            						einAuftrag.setmStatus("Bezahlt");
+	            						System.out.println("Bezahlt: " + einAuftrag.getmZahlung());
+	            					}
+	            				}
+	            			}
+	            		}
+	            		index++;
+	            	}
 	                     break;
 	            case Auswertung:
 	            	System.out.println("Welchen Treibstoff möchten sie auswerten?");
 	            	String treibstoffBez = console.readLine();
-	            	//Auswerten
+	            	t.AuswertenByTreibstoff(treibstoffBez);
 	                break;
 	            default: 
 	            	System.out.println("Ungültiger Befehl");
