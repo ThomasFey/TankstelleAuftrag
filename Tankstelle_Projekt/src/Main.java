@@ -27,10 +27,11 @@ public class Main {
 		lastwagenTreibstoffe.add(diesel);
 		lastwagenTreibstoffe.add(superDiesel);
 		
-		t.addTreibstoff(Bleifrei95);
-		t.addTreibstoff(Bleifrei98);
 		t.addTreibstoff(diesel);
 		t.addTreibstoff(superDiesel);
+		t.addTreibstoff(Bleifrei95);
+		t.addTreibstoff(Bleifrei98);
+		
 		
 		t.addZapfsaeule(new Zapfsaeule(autoTreibstoffe));
 		t.addZapfsaeule(new Zapfsaeule(lastwagenTreibstoffe));
