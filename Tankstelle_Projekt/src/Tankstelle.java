@@ -34,6 +34,10 @@ public class Tankstelle {
 	{
 		return mTankauftraege;
 	}
+	public List<Zapfsaeule> getZapfsaeulen()
+	{
+		return mZapfsaeulen;
+	}
 	public void addTreibstoff(Treibstoff pTreibstoff)
 	{
 		mTreibstoffe.add(pTreibstoff);
