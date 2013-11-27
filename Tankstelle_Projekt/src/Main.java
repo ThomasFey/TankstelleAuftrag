@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class Main {
@@ -11,6 +12,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		System.out.println("Tankstelle Programm");
 		Tankstelle t = new Tankstelle();
+		Scanner in = new Scanner(System.in);
 		
 		Treibstoff Bleifrei95 = new Treibstoff ( 1.7, "Super Bleifrei 95", 400);
 		Treibstoff Bleifrei98 = new Treibstoff ( 1.9, "Super Bleifrei 98", 450);
@@ -42,37 +44,37 @@ public class Main {
 		String eingabe = "";
 		while (eingabe != "Quit")
 		{
-			eingabe = console.readLine();
+			eingabe = in.next();
 			switch (eingabe) {
-	            case Tanken:
+	            case "Tanken":
 	            	System.out.println("An welche Zapfsaeule möchten sie tanken?");
-	            	int zapfsaeuleIndex = Integer.parseInt(console.readLine());
+	            	int zapfsaeuleIndex = Integer.parseInt(in.next());
 	            	System.out.println("Wie viel möchten sie tanken?");
-	            	int anzahlLiter = Integer.parseInt(console.readLine());
+	            	int anzahlLiter = Integer.parseInt(in.next());
 	            	System.out.println("Was möchten sie tanken?");
-	            	String treibstoffBez = console.readLine();
-	            	int index = 0
+	            	String treibstoffBez = in.next();
+	            	int index = 0;
 	            	for(Zapfsaeule eineZapfsaeule : t.getZapfsaeulen())
 	            	{
 	            		if(zapfsaeuleIndex == index)
 	            		{
 	            			for(Zapfhahn einZapfhahn : eineZapfsaeule.getmZapfhahn())
 	            			{
-	            				einZapfhahn.Tanken(t, anzahlLiter)
+	            				einZapfhahn.Tanken(t, anzahlLiter);
 	            			}
 	            		}
 	            		index++;
 	            	}
 	                     break;
-	            case Bezahlen:
+	            case "Bezahlen":
 	            	System.out.println("Für welche Zapfsaeule möchten sie zahlen?");
-	            	int zapfsaeuleIndex = Integer.parseInt(console.readLine());
-	            	int index = 0
+	            	int zapfsaeuleIndex1 = Integer.parseInt(in.next());
+	            	int index1 = 0;
 	            	for(Zapfsaeule eineZapfsaeule : t.getZapfsaeulen())
 	            	{
-	            		if(zapfsaeuleIndex == index)
+	            		if(zapfsaeuleIndex1 == index1)
 	            		{
-	            			for(Tankauftrag einAuftrag : t.getTankauftrag)
+	            			for(Tankauftrag einAuftrag : t.getTankauftrag())
 	            			{
 	            				if(eineZapfsaeule == einAuftrag.getmZapfhahn().getmZapfsaeule())
 	            				{
@@ -87,10 +89,10 @@ public class Main {
 	            		index++;
 	            	}
 	                     break;
-	            case Auswertung:
+	            case "Auswertung":
 	            	System.out.println("Welchen Treibstoff möchten sie auswerten?");
-	            	String treibstoffBez = console.readLine();
-	            	t.AuswertenByTreibstoff(treibstoffBez);
+	            	String treibstoffBez1 = in.next();
+	            	t.AuswertenByTreibstoffByBezeichnung(treibstoffBez1);
 	                break;
 	            default: 
 	            	System.out.println("Ungültiger Befehl");
