@@ -14,10 +14,10 @@ public class Main {
 		Tankstelle t = new Tankstelle();
 		Scanner in = new Scanner(System.in);
 		
-		Treibstoff Bleifrei95 = new Treibstoff ( 1.7, "Super Bleifrei 95", 400);
-		Treibstoff Bleifrei98 = new Treibstoff ( 1.9, "Super Bleifrei 98", 450);
-		Treibstoff diesel = new Treibstoff ( 1.8, "Diesel", 425);
-		Treibstoff superDiesel = new Treibstoff ( 1.65, "Super Diesel", 475);
+		Treibstoff Bleifrei95 = new Treibstoff ( 1.7, " Super Bleifrei 95 ", 400);
+		Treibstoff Bleifrei98 = new Treibstoff ( 1.9, " Super Bleifrei 98 ", 450);
+		Treibstoff diesel = new Treibstoff ( 1.8, " Diesel ", 425);
+		Treibstoff superDiesel = new Treibstoff ( 1.65, " Super Diesel ", 475);
 		
 		List<Treibstoff> autoTreibstoffe = new ArrayList<Treibstoff>();
 		autoTreibstoffe.add(Bleifrei95);
@@ -42,16 +42,20 @@ public class Main {
 		
 		s.displayInfo(autoTreibstoffe);
 		int eingabe = 0;
+		System.out.println("Was moechten sie machen?");
 		while (eingabe != 5)
 		{
 			eingabe = Integer.parseInt(in.next());
 			switch (eingabe) {
 	            case 1:
-	            	System.out.println("An welche Zapfsaeule möchten sie tanken?");
+	            	System.out.println("An welche Zapfsaeule moechten sie tanken?");
+	            	System.out.println("");
 	            	int zapfsaeuleIndex = Integer.parseInt(in.next());
-	            	System.out.println("Wie viel möchten sie tanken?");
+	            	System.out.println("Wie viel moechten sie tanken?");
+	            	System.out.println("");
 	            	int anzahlLiter = Integer.parseInt(in.next());
-	            	System.out.println("Was möchten sie tanken?");
+	            	System.out.println("Was moechten sie tanken?");
+	            	System.out.println("");
 	            	String treibstoffBez = in.next();
 	            	int index = 0;
 	            	for(Zapfsaeule eineZapfsaeule : t.getZapfsaeulen())
@@ -60,14 +64,19 @@ public class Main {
 	            		{
 	            			for(Zapfhahn einZapfhahn : eineZapfsaeule.getmZapfhahn())
 	            			{
-	            				einZapfhahn.Tanken(t, anzahlLiter);
+	            				if(einZapfhahn.getmTreibstoffe().getmBezeichnung().compareTo(treibstoffBez) == 0)
+	            				{
+	            					einZapfhahn.Tanken(t, anzahlLiter);
+	            					System.out.println("Getankt");
+	            				}
 	            			}
 	            		}
 	            		index++;
 	            	}
 	                     break;
 	            case 2:
-	            	System.out.println("Für welche Zapfsaeule möchten sie zahlen?");
+	            	System.out.println("Fuer welche Zapfsaeule moechten sie zahlen?");
+	            	System.out.println("");
 	            	int zapfsaeuleIndex1 = Integer.parseInt(in.next());
 	            	int index1 = 0;
 	            	for(Zapfsaeule eineZapfsaeule : t.getZapfsaeulen())
@@ -90,15 +99,18 @@ public class Main {
 	            	}
 	                     break;
 	            case 3:
-	            	System.out.println("Welchen Treibstoff möchten sie auswerten?");
+	            	System.out.println("Welchen Treibstoff moechten sie auswerten?");
+	            	System.out.println("");
 	            	String treibstoffBez1 = in.next();
 	            	t.AuswertenByTreibstoff(treibstoffBez1);
 	                break;
+	            case 4:
+	            	s.displayInfo(autoTreibstoffe);
 	            default: 
-	            	System.out.println("Ungültiger Befehl");
+	            	System.out.println("Ungueltiger Befehl");
 	                break;
 			}
-			System.out.println("Was möchten sie machen?");	
+			System.out.println("Was moechten sie machen?");	
 		}
 		
 	}

@@ -93,7 +93,7 @@ public class Tankstelle {
 		for(int i = 0; i <= 3; i++)
 		{
 			Treibstoff treibstoffe = mTreibstoffe.get(i);
-			if(treibstoffe.getmBezeichnung() == pBezeichnung)
+			if(treibstoffe.getmBezeichnung().compareTo(pBezeichnung) == 0)
 			{
 				return treibstoffe;
 			}
