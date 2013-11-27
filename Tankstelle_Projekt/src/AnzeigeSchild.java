@@ -6,7 +6,7 @@ public class AnzeigeSchild {
 	{
 		for(Treibstoff einTreibstoff : pTreibstoff)
 		{
-			System.out.println(einTreibstoff.getmBezeichnung() +  "Preis pro Liter" + einTreibstoff.getmPreisProLiter());
+			System.out.println(einTreibstoff.getmBezeichnung() +  "  Preis pro Liter: " + einTreibstoff.getmPreisProLiter());
 		}
 	}
 }

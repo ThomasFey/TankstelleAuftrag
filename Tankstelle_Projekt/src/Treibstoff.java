@@ -32,7 +32,16 @@ public class Treibstoff {
 		return mKapazitaet;
 	}
 	
+	public void setmKapazitaet(int pKapazitaet) {
+		mKapazitaet = pKapazitaet;
+	}
+	
 	public double getmInhalt() {
 		return mInhalt;
+	}
+	
+	public void setmInhalt(int pInhalt)
+	{
+		mInhalt = pInhalt;
 	}
 }

@@ -1,6 +1,5 @@
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Tankstelle {
 	private String mStandort;
@@ -90,7 +89,7 @@ public class Tankstelle {
 	}
 	public Treibstoff getTreibstoffeByBezeichnung(String pBezeichnung)
 	{
-		for(int i = 0; i <= 3; i++)
+		for(int i = 0; i < mTreibstoffe.size(); i++)
 		{
 			Treibstoff treibstoffe = mTreibstoffe.get(i);
 			if(treibstoffe.getmBezeichnung().compareTo(pBezeichnung) == 0)

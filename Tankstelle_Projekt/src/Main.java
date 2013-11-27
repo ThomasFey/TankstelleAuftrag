@@ -14,10 +14,10 @@ public class Main {
 		Tankstelle t = new Tankstelle();
 		Scanner in = new Scanner(System.in);
 		
-		Treibstoff Bleifrei95 = new Treibstoff ( 1.7, " Super Bleifrei 95 ", 400);
-		Treibstoff Bleifrei98 = new Treibstoff ( 1.9, " Super Bleifrei 98 ", 450);
-		Treibstoff diesel = new Treibstoff ( 1.8, " Diesel ", 425);
-		Treibstoff superDiesel = new Treibstoff ( 1.65, " Super Diesel ", 475);
+		Treibstoff Bleifrei95 = new Treibstoff ( 1.81, "Super Bleifrei 95", 10000);
+		Treibstoff Bleifrei98 = new Treibstoff ( 1.81, "Super Bleifrei 98", 10000);
+		Treibstoff diesel = new Treibstoff ( 1.98, "Diesel", 10000);
+		Treibstoff superDiesel = new Treibstoff ( 2.01, "Super Diesel", 20000);
 		
 		List<Treibstoff> autoTreibstoffe = new ArrayList<Treibstoff>();
 		autoTreibstoffe.add(Bleifrei95);
@@ -49,14 +49,15 @@ public class Main {
 			switch (eingabe) {
 	            case 1:
 	            	System.out.println("An welche Zapfsaeule moechten sie tanken?");
-	            	System.out.println("");
 	            	int zapfsaeuleIndex = Integer.parseInt(in.next());
 	            	System.out.println("Wie viel moechten sie tanken?");
-	            	System.out.println("");
 	            	int anzahlLiter = Integer.parseInt(in.next());
 	            	System.out.println("Was moechten sie tanken?");
-	            	System.out.println("");
 	            	String treibstoffBez = in.next();
+	            	double preis = t.getTreibstoffeByBezeichnung(treibstoffBez).getmPreisProLiter() * (double) anzahlLiter;
+	            	System.out.println("Preis: " + preis);
+	            	t.getTreibstoffeByBezeichnung(treibstoffBez).setmInhalt(t.getTreibstoffeByBezeichnung(treibstoffBez).getmKapatitaet() - anzahlLiter);
+	            	System.out.println("Tankinhalt: " + t.getTreibstoffeByBezeichnung(treibstoffBez).getmInhalt());
 	            	int index = 0;
 	            	for(Zapfsaeule eineZapfsaeule : t.getZapfsaeulen())
 	            	{

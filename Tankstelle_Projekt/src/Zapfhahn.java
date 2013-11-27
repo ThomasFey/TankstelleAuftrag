@@ -1,6 +1,3 @@
-import java.util.List;
-
-
 public class Zapfhahn {
 	private int mNummer;
 	private Treibstoff mTreibstoffe;
