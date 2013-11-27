@@ -41,12 +41,12 @@ public class Main {
 		AnzeigeSchild s = new AnzeigeSchild();
 		
 		s.displayInfo(autoTreibstoffe);
-		String eingabe = "";
-		while (eingabe != "Quit")
+		int eingabe = 0;
+		while (eingabe != 5)
 		{
-			eingabe = in.next();
+			eingabe = Integer.parseInt(in.next());
 			switch (eingabe) {
-	            case "Tanken":
+	            case 1:
 	            	System.out.println("An welche Zapfsaeule möchten sie tanken?");
 	            	int zapfsaeuleIndex = Integer.parseInt(in.next());
 	            	System.out.println("Wie viel möchten sie tanken?");
@@ -66,7 +66,7 @@ public class Main {
 	            		index++;
 	            	}
 	                     break;
-	            case "Bezahlen":
+	            case 2:
 	            	System.out.println("Für welche Zapfsaeule möchten sie zahlen?");
 	            	int zapfsaeuleIndex1 = Integer.parseInt(in.next());
 	            	int index1 = 0;
@@ -86,13 +86,13 @@ public class Main {
 	            				}
 	            			}
 	            		}
-	            		index++;
+	            		index1++;
 	            	}
 	                     break;
-	            case "Auswertung":
+	            case 3:
 	            	System.out.println("Welchen Treibstoff möchten sie auswerten?");
 	            	String treibstoffBez1 = in.next();
-	            	t.AuswertenByTreibstoffByBezeichnung(treibstoffBez1);
+	            	t.AuswertenByTreibstoff(treibstoffBez1);
 	                break;
 	            default: 
 	            	System.out.println("Ungültiger Befehl");

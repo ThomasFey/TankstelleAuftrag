@@ -47,15 +47,15 @@ public class Tankstelle {
 	{
 		mZapfsaeulen.add(pZapfsaeule);
 	}
-	public void AuswertenByTreibstoff(string pTreibstoffbezeichnung)
+	public void AuswertenByTreibstoff(String pTreibstoffbezeichnung)
 	{
-		Treibstoff = getTreibstoffeByBezeichnung(string pTreibstoffbezeichnung)
+		Treibstoff einTreibstoff = getTreibstoffeByBezeichnung(pTreibstoffbezeichnung);
 		int anzahlAuftraege = 0;
 		double Umsatz = 0;
 		for(int i = 0; i < mTankauftraege.size(); i++)
 		{
 			Tankauftrag einTankauftrag = mTankauftraege.get(i);
-			if(Treibstoff == einTankauftrag.getmZapfhahn().getmTreibstoffe())
+			if(einTreibstoff == einTankauftrag.getmZapfhahn().getmTreibstoffe())
 			{
 				Umsatz =+ einTankauftrag.getmZahlung();
 				anzahlAuftraege ++;
@@ -67,13 +67,13 @@ public class Tankstelle {
 	}
 	public void AuswertenByTreibstoff(Treibstoff pTreibstoff)
 	{
-		Treibstoff = pTreibstoff;
+		Treibstoff einTreibstoff = pTreibstoff;
 		int anzahlAuftraege = 0;
 		double Umsatz = 0;
 		for(int i = 0; i < mTankauftraege.size(); i++)
 		{
 			Tankauftrag einTankauftrag = mTankauftraege.get(i);
-			if(Treibstoff == einTankauftrag.getmZapfhahn().getmTreibstoffe())
+			if(pTreibstoff == einTankauftrag.getmZapfhahn().getmTreibstoffe())
 			{
 				Umsatz =+ einTankauftrag.getmZahlung();
 				anzahlAuftraege ++;
@@ -86,7 +86,7 @@ public class Tankstelle {
 	
 	public Treibstoff getTreibstoffeByIndex(int pIndex)
 	{
-		return  mTreibstoffe.get(i);
+		return  mTreibstoffe.get(pIndex);
 	}
 	public Treibstoff getTreibstoffeByBezeichnung(String pBezeichnung)
 	{
@@ -101,7 +101,7 @@ public class Tankstelle {
 		
 		return null;
 	}
-	public void setmAnzeigeSchild(AnzeigeSchild pStandort) {
+	public void setmAnzeigeSchild(AnzeigeSchild pAnzeigeSchild) {
 		this.mAnzeigeSchild = pAnzeigeSchild;
 	}
 
