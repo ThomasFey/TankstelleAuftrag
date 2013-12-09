@@ -116,7 +116,7 @@ public class Tankstelle {
 		return mStandort;
 	}
 	public double runden(double pPreis) {
-		pPreis = Math.round(ergebnis*20.0)/20.0
+		pPreis = Math.round(pPreis*20.0)/20.0;
 		return pPreis;
 		
 	}
