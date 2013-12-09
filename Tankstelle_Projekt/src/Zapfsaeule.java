@@ -12,7 +12,7 @@ import java.util.List;
      
      for(int i = 0; i < treibstoffe.size(); i++)
      {
-       Zapfhahn einZapfhahn = new Zapfhahn(treibstoffe.get(i),i,this);
+       new Zapfhahn(treibstoffe.get(i),i,this);
      }
    }
  

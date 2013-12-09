@@ -43,6 +43,10 @@ public class Main {
 		s.displayInfo(autoTreibstoffe);
 		int eingabe = 0;
 		System.out.println("Was moechten sie machen?");
+		System.out.println("1: Tanken");
+		System.out.println("2: Zahlen");
+		System.out.println("3: Treibstoff Information");
+		System.out.println("4: Alle Preis anzeigen");
 		while (eingabe != 5)
 		{
 			eingabe = Integer.parseInt(in.next());
@@ -63,11 +67,13 @@ public class Main {
 	            	{
 	            		if(zapfsaeuleIndex == index)
 	            		{
-	            			for(Zapfhahn einZapfhahn : eineZapfsaeule.getmZapfhahn())
+	            			List<Zapfhahn> einZapfhahn = eineZapfsaeule.getmZapfhahn();
+	            			
+	            			for(int indexZapfhahn = einZapfhahn.size(); indexZapfhahn < 1; indexZapfhahn--)
 	            			{
-	            				if(einZapfhahn.getmTreibstoffe().getmBezeichnung().compareTo(treibstoffBez) == 0)
+	            				if(einZapfhahn.get(indexZapfhahn).getmTreibstoffe().getmBezeichnung().compareTo(treibstoffBez) == 0)
 	            				{
-	            					einZapfhahn.Tanken(t, anzahlLiter);
+	            					einZapfhahn.get(indexZapfhahn).Tanken(t, anzahlLiter);
 	            					System.out.println("Getankt");
 	            				}
 	            			}
