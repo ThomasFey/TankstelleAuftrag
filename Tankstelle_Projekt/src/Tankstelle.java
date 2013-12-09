@@ -115,4 +115,9 @@ public class Tankstelle {
 	public String getmStandort() {
 		return mStandort;
 	}
+	public double runden(double pPreis) {
+		pPreis = Math.round(ergebnis*20.0)/20.0
+		return pPreis;
+		
+	}
 }
