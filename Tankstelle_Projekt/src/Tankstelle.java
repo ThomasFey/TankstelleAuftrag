@@ -54,13 +54,68 @@ public class Tankstelle {
 		for(int i = 0; i < mTankauftraege.size(); i++)
 		{
 			Tankauftrag einTankauftrag = mTankauftraege.get(i);
-			if(einTreibstoff == einTankauftrag.getmZapfhahn().getmTreibstoffe())
+			if(einTreibstoff.compareTo(einTankauftrag.getmZapfhahn().getmTreibstoffe()) == 0)
 			{
 				Umsatz =+ einTankauftrag.getmZahlung();
 				anzahlAuftraege ++;
 			}
 		}
 		System.out.println("Treibstoff: " + einTreibstoff.getmBezeichnung());
+		System.out.println("Anzahl Aufträge: " + anzahlAuftraege);
+		System.out.println("Umsatz: " + Umsatz + " Fr.");
+	}
+	public void AuswertenByJahr(int pJahr)
+	{
+		int anzahlAuftraege = 0;
+		double Umsatz = 0;
+		for(int i = 0; i < mTankauftraege.size(); i++)
+		{
+			Tankauftrag einTankauftrag = mTankauftraege.get(i);
+			if(einTankauftrag.getmDatum().get(Calendar.YEAR) == pJahr)
+			{
+				Umsatz =+ einTankauftrag.getmZahlung();
+				anzahlAuftraege ++;
+			}
+		}
+		System.out.println("Jahr: " + pJahr);
+		System.out.println("Anzahl Aufträge: " + anzahlAuftraege);
+		System.out.println("Umsatz: " + Umsatz + " Fr.");
+	}
+	public void AuswertenByMonat(int pMonat)
+	{
+		int anzahlAuftraege = 0;
+		double Umsatz = 0;
+		for(int i = 0; i < mTankauftraege.size(); i++)
+		{
+			Tankauftrag einTankauftrag = mTankauftraege.get(i);
+			if(einTankauftrag.getmDatum().get(Calendar.MONTH) == (pMonat - 1))
+			{
+				Umsatz =+ einTankauftrag.getmZahlung();
+				anzahlAuftraege ++;
+			}
+		}
+		System.out.println("Monat: " + pMonat);
+		System.out.println("Anzahl Aufträge: " + anzahlAuftraege);
+		System.out.println("Umsatz: " + Umsatz + " Fr.");
+	}
+	public void AuswertenByTag(int pJahr,int pMonat,int pTag)
+	{
+		int anzahlAuftraege = 0;
+		double Umsatz = 0;
+		for(int i = 0; i < mTankauftraege.size(); i++)
+		{
+			Tankauftrag einTankauftrag = mTankauftraege.get(i);
+			if(einTankauftrag.getmDatum().get(Calendar.YEAR) == pJahr)
+			{
+				if(einTankauftrag.getmDatum().get(Calendar.MONTH) == (pMonat - 1))
+				{
+					if(einTankauftrag.getmDatum().get(Calendar.DAY_OF_MONTH) == pTag)
+					Umsatz =+ einTankauftrag.getmZahlung();
+					anzahlAuftraege ++;
+				}
+			}
+		}
+		System.out.println("Tag: " + pJahr);
 		System.out.println("Anzahl Aufträge: " + anzahlAuftraege);
 		System.out.println("Umsatz: " + Umsatz + " Fr.");
 	}
