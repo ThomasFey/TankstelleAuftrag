@@ -1,5 +1,6 @@
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class Tankstelle {
 	private String mStandort;
@@ -54,7 +55,7 @@ public class Tankstelle {
 		for(int i = 0; i < mTankauftraege.size(); i++)
 		{
 			Tankauftrag einTankauftrag = mTankauftraege.get(i);
-			if(einTreibstoff.compareTo(einTankauftrag.getmZapfhahn().getmTreibstoffe()) == 0)
+			if(einTreibstoff == einTankauftrag.getmZapfhahn().getmTreibstoffe())
 			{
 				Umsatz =+ einTankauftrag.getmZahlung();
 				anzahlAuftraege ++;
