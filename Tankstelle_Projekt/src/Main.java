@@ -9,35 +9,39 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		System.out.println("Tankstelle Programm");
 		Tankstelle t = new Tankstelle();
 		Scanner in = new Scanner(System.in);
 		
+		//Erstellt alle Treibstoffe
 		Treibstoff Bleifrei95 = new Treibstoff ( 1.81, "Super Bleifrei 95", 10000);
 		Treibstoff Bleifrei98 = new Treibstoff ( 1.81, "Super Bleifrei 98", 10000);
 		Treibstoff diesel = new Treibstoff ( 1.98, "Diesel", 10000);
 		Treibstoff superDiesel = new Treibstoff ( 2.01, "Super Diesel", 20000);
 		
+		//Zuweist die Treibstoffe für Auto
 		List<Treibstoff> autoTreibstoffe = new ArrayList<Treibstoff>();
 		autoTreibstoffe.add(Bleifrei95);
 		autoTreibstoffe.add(Bleifrei98);
 		autoTreibstoffe.add(diesel);
 		autoTreibstoffe.add(superDiesel);
 		
+		//Zuweist die Treibstoffe für Lastwagen
 		List<Treibstoff> lastwagenTreibstoffe = new ArrayList<Treibstoff>();
 		lastwagenTreibstoffe.add(diesel);
 		lastwagenTreibstoffe.add(superDiesel);
 		
+		//Treibstoffe zu die Tankstelle angelegt
 		t.addTreibstoff(diesel);
 		t.addTreibstoff(superDiesel);
 		t.addTreibstoff(Bleifrei95);
 		t.addTreibstoff(Bleifrei98);
 		
-		
+		//Ein Zapfsaeule für jede Fahrzeugetyp erstellt
 		t.addZapfsaeule(new Zapfsaeule(autoTreibstoffe));
 		t.addZapfsaeule(new Zapfsaeule(lastwagenTreibstoffe));
 		
+		//Ein Anzeigeschild erstellt
 		AnzeigeSchild s = new AnzeigeSchild();
 		
 		s.displayInfo(autoTreibstoffe);
@@ -51,6 +55,7 @@ public class Main {
 		{
 			eingabe = Integer.parseInt(in.next());
 			switch (eingabe) {
+				//Tanken Vorgang
 	            case 1:
 	            	System.out.println("An welche Zapfsaeule moechten sie tanken?");
 	            	int zapfsaeuleIndex = Integer.parseInt(in.next());
@@ -81,6 +86,7 @@ public class Main {
 	            		index++;
 	            	}
 	                     break;
+	            //Bezahlen Vorgang
 	            case 2:
 	            	System.out.println("Fuer welche Zapfsaeule moechten sie zahlen?");
 	            	System.out.println("");
@@ -105,14 +111,17 @@ public class Main {
 	            		index1++;
 	            	}
 	                     break;
+                //Treibstoff auswerten Vorgang
 	            case 3:
 	            	System.out.println("Welchen Treibstoff moechten sie auswerten?");
 	            	System.out.println("");
 	            	String treibstoffBez1 = in.next();
 	            	t.AuswertenByTreibstoff(treibstoffBez1);
 	                break;
+	            //Alle Treibstoffe mit PreisProLiter anzeigen
 	            case 4:
 	            	s.displayInfo(autoTreibstoffe);
+	            //Exception Handling
 	            default: 
 	            	System.out.println("Ungueltiger Befehl");
 	                break;

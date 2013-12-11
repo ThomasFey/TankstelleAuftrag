@@ -19,6 +19,7 @@ public class Zapfhahn {
 	public Treibstoff getmTreibstoffe() {
 		return mTreibstoffe;
 	}
+	//Erstellt ein Tankauftrag mit der eingegebene Anzahl Liter
 	public void Tanken(Tankstelle dieTankstelle, int pAnzahlLiter)
 	{
 		Tankauftrag einAuftrag = new Tankauftrag(this,pAnzahlLiter);

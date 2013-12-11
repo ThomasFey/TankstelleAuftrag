@@ -18,6 +18,7 @@ public class Tankstelle {
 		mAnzeigeSchild = new AnzeigeSchild();
 		mKassen = new ArrayList<Kasse>();
 	}
+	//Fügt einen Auftrag zu die Aufträgeliste
 	public void addTankauftrag(Tankauftrag pTankauftrag)
 	{
 		mTankauftraege.add(pTankauftrag);
@@ -26,6 +27,7 @@ public class Tankstelle {
 	{
 		return mKassen;
 	}
+	//Fügt eine Kasse zur Tankstelle hinzu
 	public void addKasse(Kasse pKasse)
 	{
 		mKassen.add(pKasse);
@@ -38,15 +40,17 @@ public class Tankstelle {
 	{
 		return mZapfsaeulen;
 	}
+	//Fügt die Treibstoffe zur Tankstelle hinzu
 	public void addTreibstoff(Treibstoff pTreibstoff)
 	{
 		mTreibstoffe.add(pTreibstoff);
 	}
-	
+	//Fügt eine Zapfsäule zur Tankstelle
 	public void addZapfsaeule(Zapfsaeule pZapfsaeule)
 	{
 		mZapfsaeulen.add(pZapfsaeule);
 	}
+	//Auswertet der eingegebene Treibstoffbezeichnung
 	public void AuswertenByTreibstoff(String pTreibstoffbezeichnung)
 	{
 		Treibstoff einTreibstoff = getTreibstoffeByBezeichnung(pTreibstoffbezeichnung);
@@ -65,6 +69,7 @@ public class Tankstelle {
 		System.out.println("Anzahl AuftrÃ¤ge: " + anzahlAuftraege);
 		System.out.println("Umsatz: " + Umsatz + " Fr.");
 	}
+	//Auswertet die Aufträge in der eingegebene Jahr
 	public void AuswertenByJahr(int pJahr)
 	{
 		int anzahlAuftraege = 0;
@@ -82,6 +87,7 @@ public class Tankstelle {
 		System.out.println("Anzahl AuftrÃ¤ge: " + anzahlAuftraege);
 		System.out.println("Umsatz: " + Umsatz + " Fr.");
 	}
+	//Auswertet die Aufträge in der eingegebene Monat
 	public void AuswertenByMonat(int pMonat)
 	{
 		int anzahlAuftraege = 0;
@@ -99,6 +105,7 @@ public class Tankstelle {
 		System.out.println("Anzahl AuftrÃ¤ge: " + anzahlAuftraege);
 		System.out.println("Umsatz: " + Umsatz + " Fr.");
 	}
+	//Auswertet die Aufträge in der eingegebene Tag
 	public void AuswertenByTag(int pJahr,int pMonat,int pTag)
 	{
 		int anzahlAuftraege = 0;
@@ -120,6 +127,7 @@ public class Tankstelle {
 		System.out.println("Anzahl AuftrÃ¤ge: " + anzahlAuftraege);
 		System.out.println("Umsatz: " + Umsatz + " Fr.");
 	}
+	//Auswerten eines Treibstoff mit der eingegebene Treibstoff Objekt
 	public void AuswertenByTreibstoff(Treibstoff pTreibstoff)
 	{
 		Treibstoff einTreibstoff = pTreibstoff;
@@ -138,11 +146,12 @@ public class Tankstelle {
 		System.out.println("Anzahl AuftrÃ¤ge: " + anzahlAuftraege);
 		System.out.println("Umsatz: " + Umsatz + " Fr.");
 	}
-	
+	//Gibt der Treibstoff mit der eingegebene Index
 	public Treibstoff getTreibstoffeByIndex(int pIndex)
 	{
 		return  mTreibstoffe.get(pIndex);
 	}
+	//Gibt der Treibstoff mit der eingegebene Bezeichnung
 	public Treibstoff getTreibstoffeByBezeichnung(String pBezeichnung)
 	{
 		for(int i = 0; i < mTreibstoffe.size(); i++)
@@ -171,6 +180,7 @@ public class Tankstelle {
 	public String getmStandort() {
 		return mStandort;
 	}
+	//Rundet ein eingegebenes Bertrag
 	public double runden(double pPreis) {
 		pPreis = Math.round(pPreis*20.0)/20.0;
 		return pPreis;

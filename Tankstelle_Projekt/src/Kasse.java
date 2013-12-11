@@ -6,6 +6,7 @@ public class Kasse {
 		mUmsatz = 0;	
 	}
 	
+	//Bezahlt ein Auftrag und gibt die Zapfsaeule frei
 	public void bezahleTankauftrag (Tankauftrag pAuftrag)
 	{
 		mUmsatz =+ pAuftrag.getmZahlung();

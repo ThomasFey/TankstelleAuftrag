@@ -16,6 +16,7 @@ public class Tankauftrag {
 		mZahlung = (mZapfhahn.getmTreibstoffe().getmPreisProLiter() * TreibstoffLiter);
 		mZapfhahn.getmZapfsaeule().setmStatus("Unbenutzbar");
 	}
+	
 	public Calendar getmDatum() {
 		return mDatum;
 	}
